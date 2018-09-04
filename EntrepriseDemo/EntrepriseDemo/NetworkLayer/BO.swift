@@ -11,10 +11,11 @@ import Alamofire
 import SwiftyJSON
 
 class BO: NSObject {
-    //MARK: VARIABLES
+    //MARK: - VARIABLES
     var alamofireManager: Alamofire.SessionManager?
     
-    //MARK: INIT
+    
+    //MARK: - MAIN GATEWAY
     override init()
     {
         let configuration = URLSessionConfiguration.default
@@ -40,8 +41,44 @@ class BO: NSObject {
         let request = Alamofire.request(url, method: methodType, parameters: parametersDict, encoding: parameterEncoding!, headers: nil)
         request.responseJSON { (data) in
             print(data)
+            let responseCode = data.response?.statusCode
+            guard data.response != nil && responseCode == 200 else {
+                return
+            }
+            guard let dictResponse = data.result.value else {
+                return
+            }
+            onSuccess(JSON(dictResponse))
         }
     }
+    
+    //MARK: - FINANCE DATA
+    func getTimeSeriesFor(equity:String, onSuccess: @escaping(_ timeSeries: TimeSeries)->(), onError: @escaping(NSError)->()){
+        var params:[String:Any] = [:]
+        params["function"] = Constants.services.timeSeriesByMonth
+        params["apikey"] = Constants.ApiKey.kAlphavantage
+        params["symbol"] = equity
+        self.requestService(service: Constants.kFinanceApi, methodType: .get, parameters: params, onSuccess:{[weak self] json in
+            
+            let timeSeries = TimeSeries(json: json["Monthly Time Series"])
+            onSuccess(timeSeries)
+        } , onError: onError)
+    }
+    
+    func getNewsFeed(onSuccess: @escaping(_ timeSeries: TimeSeries)->(), onError: @escaping(NSError)->()){
+        var params:[String:Any] = [:]
+        params["api-key"] = Constants.ApiKey.kTheGuardian
+        //params["show-fields"] = "thumbnail"
+        
+        self.requestService(service: Constants.kTheGuardianApi, methodType: .get, parameters: params, onSuccess:{[weak self] json in
+            
+            
+            //onSuccess(timeSeries)
+            } , onError: onError)
+    }
+    
+    
+    //MARK: - UTILITIES
     
     private func encodeParameters(methodType: Alamofire.HTTPMethod, parameters: Any?) -> (ParameterEncoding? , [String: Any]?)
     {

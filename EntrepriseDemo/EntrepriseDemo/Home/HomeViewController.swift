@@ -10,20 +10,25 @@ import UIKit
 import Alamofire
 class HomeViewController: EnterpriseViewController {
 
+    deinit {
+        print("deinit homeviewcontroller")
+    }
     //MARK: - LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadConfig()
 
-        var params:[String:Any] = [:]
-        params["function"] = "TIME_SERIES_MONTHLY"
-        params["apikey"] = "1730BP20UVXJEPF0"
-        params["symbol"] = "AAPL0"
-        LibraryAPI.shared.bo.requestService(service: "", methodType: .get, parameters: params, onSuccess: {json in
+
+        LibraryAPI.shared.bo.getNewsFeed(onSuccess: { (response) in
             
-        }, onError: {error in
+        }) { (error) in
             
-        })
+        }
+//        LibraryAPI.shared.bo.getTimeSeriesFor(equity: "MSFT", onSuccess: { (timeSeries) in
+//
+//        }) { (error) in
+//            print(error)
+//        }
         //Hide indicator
 //        MessageManager.shared.showLoadingHUD()
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
@@ -34,10 +39,7 @@ class HomeViewController: EnterpriseViewController {
 //        })
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     fileprivate func loadConfig(){
         
