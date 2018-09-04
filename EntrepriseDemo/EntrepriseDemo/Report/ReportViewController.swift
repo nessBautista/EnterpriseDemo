@@ -11,26 +11,43 @@ import SwiftCharts
 
 class ReportViewController: EnterpriseViewController {
 
+    let equities = ["MSFT", "TSLA", "NASQ"]
+    let picker = UIPickerView()
+    @IBOutlet weak var txtEquity: UITextField!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.txtEquity.inputView = picker
+        self.picker.delegate = self
+        self.picker.dataSource = self
+        //self.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onTap)))
         // Do any additional setup after loading the view.
     }
 
-        
 
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc fileprivate func onTap(){
+        self.txtEquity.endEditing(true)
     }
-    */
+}
 
+extension ReportViewController: UIPickerViewDelegate, UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.equities.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.equities[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print(self.equities[row])
+        self.txtEquity.endEditing(true)
+    }
+    
 }

@@ -178,6 +178,13 @@
                                     <segue destination="qxD-aN-t1U" kind="embed" id="vgB-Ie-81F"/>
                                 </connections>
                             </containerView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MdW-2r-bnh">
+                                <rect key="frame" x="31" y="30" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -191,6 +198,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="89Q-1Z-med"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEquity" destination="MdW-2r-bnh" id="dQH-y2-JJN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGR-8v-u3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
