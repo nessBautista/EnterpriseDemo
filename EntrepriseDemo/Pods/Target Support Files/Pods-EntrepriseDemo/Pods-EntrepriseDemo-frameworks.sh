@@ -144,6 +144,8 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CorePlot/CorePlot.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KUIPopOver/KUIPopOver.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework"
@@ -155,6 +157,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"
@@ -163,6 +166,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/CorePlot/CorePlot.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KUIPopOver/KUIPopOver.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework"
@@ -174,6 +179,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework"

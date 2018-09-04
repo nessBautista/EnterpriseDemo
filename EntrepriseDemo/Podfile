@@ -24,6 +24,8 @@ target 'EntrepriseDemo' do
   pod 'RxCocoa',    '~> 4.0'
   pod 'RxDataSources', '~> 3.0'
   pod 'CorePlot', '~> 2.2'
+  pod 'Charts'
+  pod 'SwiftCharts', '~> 0.6.1'
   target 'EntrepriseDemoTests' do
     inherit! :search_paths
     # Pods for testing

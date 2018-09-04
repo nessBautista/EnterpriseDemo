@@ -11,33 +11,33 @@ import SwiftyJSON
 
 class TimeSeries
 {
-    let timeSeries:[[String:TimeSeriesItem]]
+    var data:[(String, TimeSeriesItem)]
     init() {
-        self.timeSeries = []
+        self.data = [(String(), TimeSeriesItem())]
     }
     
     init(json: JSON){
     
         if let dict = json.dictionaryObject {
-            var tms:[[String:TimeSeriesItem]] = []
+            var tms:[(String,TimeSeriesItem)] = []
             dict.forEach { (key, value) in
+                
                 let jsonItem = JSON(value)
-                let dict = [key: TimeSeriesItem(json:jsonItem)]
-                tms.append(dict)
+                tms.append((key, TimeSeriesItem(json:jsonItem)))
             }
-            self.timeSeries = tms
+            self.data = tms
         } else{
-            self.timeSeries = []
+            self.data = [(String(), TimeSeriesItem())]
         }
     }
 }
 
 class TimeSeriesItem {
-    let open: Float
-    let high: Float
-    let low: Float
-    let close: Float
-    let volumen: Float
+    let open: Double
+    let high: Double
+    let low: Double
+    let close: Double
+    let volumen: Double
     
     init() {
         self.open = 0
@@ -47,10 +47,10 @@ class TimeSeriesItem {
         self.volumen = 0
     }
     init(json:JSON){
-        self.open = Float(json["1. open"].string ?? String()) ?? 0
-        self.high = Float(json["2. high"].string ?? String()) ?? 0
-        self.low = Float(json["3. low"].string ?? String()) ?? 0
-        self.close = Float(json["4. close"].string ?? String()) ?? 0
-        self.volumen = Float(json["5. volume"].string ?? String()) ?? 0
+        self.open = Double(json["1. open"].string ?? String()) ?? 0
+        self.high = Double(json["2. high"].string ?? String()) ?? 0
+        self.low = Double(json["3. low"].string ?? String()) ?? 0
+        self.close = Double(json["4. close"].string ?? String()) ?? 0
+        self.volumen = Double(json["5. volume"].string ?? String()) ?? 0
     }
 }

@@ -11,6 +11,8 @@
 		31736B74A0B3CB5BF62BB96B /* Pods_EntrepriseDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2D2F9FBAFCE5DC7C9FFE946 /* Pods_EntrepriseDemoTests.framework */; };
 		CC08FAD2213CD31C002627B6 /* TimeSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC08FAD1213CD31C002627B6 /* TimeSeries.swift */; };
 		CC08FAD4213CEBC8002627B6 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC08FAD3213CEBC8002627B6 /* NewsItem.swift */; };
+		CC90433B213E335C0040B0EA /* RangedAxisExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC90433A213E335C0040B0EA /* RangedAxisExample.swift */; };
+		CCADFAEF213E208F008C7889 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADFAEE213E208F008C7889 /* ReportViewController.swift */; };
 		E2017874213A3D5F00B79D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2017873213A3D5F00B79D46 /* AppDelegate.swift */; };
 		E2017876213A3D5F00B79D46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2017875213A3D5F00B79D46 /* ViewController.swift */; };
 		E2017879213A3D5F00B79D46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2017877213A3D5F00B79D46 /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		BBC32BE7866AD0AE2DBFC043 /* Pods_EntrepriseDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EntrepriseDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC08FAD1213CD31C002627B6 /* TimeSeries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeries.swift; sourceTree = "<group>"; };
 		CC08FAD3213CEBC8002627B6 /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		CC90433A213E335C0040B0EA /* RangedAxisExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangedAxisExample.swift; sourceTree = "<group>"; };
+		CCADFAEE213E208F008C7889 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		D2D2F9FBAFCE5DC7C9FFE946 /* Pods_EntrepriseDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EntrepriseDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2017870213A3D5F00B79D46 /* EntrepriseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntrepriseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2017873213A3D5F00B79D46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC6A03C7213E1F7C00AD7E4C /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				CCADFAEE213E208F008C7889 /* ReportViewController.swift */,
+				CC90433A213E335C0040B0EA /* RangedAxisExample.swift */,
+			);
+			path = Report;
+			sourceTree = "<group>";
+		};
 		E2017867213A3D5E00B79D46 = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +186,7 @@
 				E2E13F8B213A57F90018E6E1 /* Login */,
 				E20178A2213A466100B79D46 /* Menu */,
 				E20178A1213A463400B79D46 /* Home */,
-				E20178A4213A468500B79D46 /* Reports */,
+				CC6A03C7213E1F7C00AD7E4C /* Report */,
 				E20178A3213A467700B79D46 /* Notes */,
 				E2017873213A3D5F00B79D46 /* AppDelegate.swift */,
 				E2017875213A3D5F00B79D46 /* ViewController.swift */,
@@ -228,13 +241,6 @@
 				E2E13F87213A56460018E6E1 /* NotesViewController.swift */,
 			);
 			path = Notes;
-			sourceTree = "<group>";
-		};
-		E20178A4213A468500B79D46 /* Reports */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Reports;
 			sourceTree = "<group>";
 		};
 		E20178B0213A491D00B79D46 /* Models */ = {
@@ -486,6 +492,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-EntrepriseDemo/Pods-EntrepriseDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/CorePlot/CorePlot.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/KUIPopOver/KUIPopOver.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
@@ -497,6 +505,7 @@
 				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
 				"${BUILT_PRODUCTS_DIR}/Spruce/Spruce.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -506,6 +515,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CorePlot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KUIPopOver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
@@ -517,6 +528,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spruce.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -559,9 +571,11 @@
 				CC08FAD2213CD31C002627B6 /* TimeSeries.swift in Sources */,
 				E2017874213A3D5F00B79D46 /* AppDelegate.swift in Sources */,
 				E20178B2213A494C00B79D46 /* MenuTableViewController.swift in Sources */,
+				CC90433B213E335C0040B0EA /* RangedAxisExample.swift in Sources */,
 				E2E13F92213A59DE0018E6E1 /* MessageManager.swift in Sources */,
 				CC08FAD4213CEBC8002627B6 /* NewsItem.swift in Sources */,
 				E20178AD213A470800B79D46 /* SWRevealViewController.m in Sources */,
+				CCADFAEF213E208F008C7889 /* ReportViewController.swift in Sources */,
 				E2E13F81213A50610018E6E1 /* EnterpriseNavigationController.swift in Sources */,
 				E2F3D04D213B960900B5D59E /* LibraryAPI.swift in Sources */,
 				E20178AF213A47D800B79D46 /* HomeViewController.swift in Sources */,

@@ -65,6 +65,12 @@ class MenuTableViewController: UITableViewController {
             let navController = EnterpriseNavigationController(rootViewController: vcNotes)
             self.pushFromRevealViewController(navController)
             self.closeMenu()
+        case 2:
+            print("Reports")
+            let vcNotes: ReportViewController = Storyboard.getInstanceFromStoryboard(StoryboardsIds.main.rawValue)
+            let navController = EnterpriseNavigationController(rootViewController: vcNotes)
+            self.pushFromRevealViewController(navController)
+            self.closeMenu()
         default:
             break
         }

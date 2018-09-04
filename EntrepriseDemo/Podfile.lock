@@ -1,5 +1,9 @@
 PODS:
   - Alamofire (4.7.3)
+  - Charts (3.1.1):
+    - Charts/Core (= 3.1.1)
+  - Charts/Core (3.1.1)
+  - CorePlot (2.2)
   - Differentiator (3.0.2)
   - GoogleMaps (2.7.0):
     - GoogleMaps/Maps (= 2.7.0)
@@ -24,17 +28,20 @@ PODS:
   - Spruce (2.0.0)
   - SRCountdownTimer (1.1)
   - Starscream (3.0.5)
+  - SwiftCharts (0.6.1)
   - SwiftLocation (3.2.3):
     - SwiftyJSON (~> 4.0.0-alpha.1)
-  - SwiftMessages (5.0.0):
-    - SwiftMessages/App (= 5.0.0)
-  - SwiftMessages/App (5.0.0)
+  - SwiftMessages (5.0.1):
+    - SwiftMessages/App (= 5.0.1)
+  - SwiftMessages/App (5.0.1)
   - SwiftyJSON (4.0.0)
   - SwiftySound (1.0.0)
   - SwipeCellKit (2.4.3)
 
 DEPENDENCIES:
   - Alamofire
+  - Charts
+  - CorePlot (~> 2.2)
   - GoogleMaps
   - HockeySDK (~> 5.1.1)
   - KUIPopOver
@@ -46,6 +53,7 @@ DEPENDENCIES:
   - Socket.IO-Client-Swift (~> 13.1.0)
   - Spruce
   - SRCountdownTimer
+  - SwiftCharts (~> 0.6.1)
   - SwiftLocation
   - SwiftMessages
   - SwiftyJSON
@@ -53,8 +61,10 @@ DEPENDENCIES:
   - SwipeCellKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
+    - Charts
+    - CorePlot
     - Differentiator
     - GoogleMaps
     - HockeySDK
@@ -68,6 +78,7 @@ SPEC REPOS:
     - Spruce
     - SRCountdownTimer
     - Starscream
+    - SwiftCharts
     - SwiftLocation
     - SwiftMessages
     - SwiftyJSON
@@ -76,6 +87,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Charts: 90a4d61da0f6e06684c591e3bcab11940fe61736
+  CorePlot: cbe0c6e14220705e32e06a89c7d6a5a908b7d7d8
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
@@ -89,12 +102,13 @@ SPEC CHECKSUMS:
   Spruce: 0932495938ccc0b75add674a99bc46c9d0e39111
   SRCountdownTimer: 9c92e444b5403c92f01dd6610299b8c634bc8562
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
+  SwiftCharts: 77378d6cf667e95f9c79a745b6778e66eed5339c
   SwiftLocation: a3c3bc2023118171ef3572188a31def94aa0892c
-  SwiftMessages: 342d312bf8d5ac11141285c8fec6308380df7f72
+  SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   SwiftySound: b9c3370956fd4ed65ed79d45563070077a50a2cd
   SwipeCellKit: cee9906e6d3a36e22ad1a852fba7f8fa0839d113
 
-PODFILE CHECKSUM: 22100647e1a77366b1f5806a5bbe37f150e15b10
+PODFILE CHECKSUM: 09cb7fefc5c7411e87e336ff353d9556af76e08f
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
