@@ -15,6 +15,12 @@
 		CC87524E213F2C9200BFCDA6 /* NewsDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC87524D213F2C9200BFCDA6 /* NewsDetailTableViewController.swift */; };
 		CC90433B213E335C0040B0EA /* RangedAxisExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC90433A213E335C0040B0EA /* RangedAxisExample.swift */; };
 		CCADFAEF213E208F008C7889 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCADFAEE213E208F008C7889 /* ReportViewController.swift */; };
+		CCD2C1D2213F59B20026037A /* EnterpriseDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1D0213F59B20026037A /* EnterpriseDemo.xcdatamodeld */; };
+		CCD2C1D8213F76AA0026037A /* CoreDataBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1D7213F76AA0026037A /* CoreDataBO.swift */; };
+		CCD2C1DC213F78A90026037A /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1DB213F78A90026037A /* NoteItem.swift */; };
+		CCD2C1DE213F842E0026037A /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1DD213F842E0026037A /* AudioManager.swift */; };
+		CCD2C1E0213F856E0026037A /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1DF213F856E0026037A /* Recorder.swift */; };
+		CCD2C1E2213F86330026037A /* ActionsTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1E1213F86330026037A /* ActionsTapGestureRecognizer.swift */; };
 		E2017874213A3D5F00B79D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2017873213A3D5F00B79D46 /* AppDelegate.swift */; };
 		E2017876213A3D5F00B79D46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2017875213A3D5F00B79D46 /* ViewController.swift */; };
 		E2017879213A3D5F00B79D46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2017877213A3D5F00B79D46 /* Main.storyboard */; };
@@ -69,6 +75,12 @@
 		CC87524D213F2C9200BFCDA6 /* NewsDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailTableViewController.swift; sourceTree = "<group>"; };
 		CC90433A213E335C0040B0EA /* RangedAxisExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangedAxisExample.swift; sourceTree = "<group>"; };
 		CCADFAEE213E208F008C7889 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		CCD2C1D1213F59B20026037A /* EnterpriseDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EnterpriseDemo.xcdatamodel; sourceTree = "<group>"; };
+		CCD2C1D7213F76AA0026037A /* CoreDataBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBO.swift; sourceTree = "<group>"; };
+		CCD2C1DB213F78A90026037A /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
+		CCD2C1DD213F842E0026037A /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		CCD2C1DF213F856E0026037A /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		CCD2C1E1213F86330026037A /* ActionsTapGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		D2D2F9FBAFCE5DC7C9FFE946 /* Pods_EntrepriseDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EntrepriseDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2017870213A3D5F00B79D46 /* EntrepriseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EntrepriseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2017873213A3D5F00B79D46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -159,9 +171,18 @@
 			path = Report;
 			sourceTree = "<group>";
 		};
+		CCD2C1D3213F736A0026037A /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				CCD2C1D7213F76AA0026037A /* CoreDataBO.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
 		E2017867213A3D5E00B79D46 = {
 			isa = PBXGroup;
 			children = (
+				CCD2C1D0213F59B20026037A /* EnterpriseDemo.xcdatamodeld */,
 				E2017872213A3D5F00B79D46 /* EntrepriseDemo */,
 				E2017887213A3D6000B79D46 /* EntrepriseDemoTests */,
 				E2017892213A3D6000B79D46 /* EntrepriseDemoUITests */,
@@ -184,6 +205,7 @@
 		E2017872213A3D5F00B79D46 /* EntrepriseDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CCD2C1D3213F736A0026037A /* DataLayer */,
 				E2F3D047213B900600B5D59E /* NetworkLayer */,
 				E2E13F82213A54770018E6E1 /* Resources */,
 				E20178B0213A491D00B79D46 /* Models */,
@@ -254,6 +276,7 @@
 			children = (
 				CC08FAD1213CD31C002627B6 /* TimeSeries.swift */,
 				CC08FAD3213CEBC8002627B6 /* NewsItem.swift */,
+				CCD2C1DB213F78A90026037A /* NoteItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -264,6 +287,8 @@
 				E2E13F80213A50610018E6E1 /* EnterpriseNavigationController.swift */,
 				E2E13F85213A55AB0018E6E1 /* Storyboard.swift */,
 				E2E13F89213A56C50018E6E1 /* EnterpriseViewController.swift */,
+				CCD2C1DF213F856E0026037A /* Recorder.swift */,
+				CCD2C1E1213F86330026037A /* ActionsTapGestureRecognizer.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -290,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				E2E13F91213A59DE0018E6E1 /* MessageManager.swift */,
+				CCD2C1DD213F842E0026037A /* AudioManager.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -577,17 +603,23 @@
 				CC08FAD2213CD31C002627B6 /* TimeSeries.swift in Sources */,
 				E2017874213A3D5F00B79D46 /* AppDelegate.swift in Sources */,
 				E20178B2213A494C00B79D46 /* MenuTableViewController.swift in Sources */,
+				CCD2C1D2213F59B20026037A /* EnterpriseDemo.xcdatamodeld in Sources */,
 				CC90433B213E335C0040B0EA /* RangedAxisExample.swift in Sources */,
 				E2E13F92213A59DE0018E6E1 /* MessageManager.swift in Sources */,
 				CC08FAD4213CEBC8002627B6 /* NewsItem.swift in Sources */,
 				E20178AD213A470800B79D46 /* SWRevealViewController.m in Sources */,
+				CCD2C1E2213F86330026037A /* ActionsTapGestureRecognizer.swift in Sources */,
 				CCADFAEF213E208F008C7889 /* ReportViewController.swift in Sources */,
+				CCD2C1DC213F78A90026037A /* NoteItem.swift in Sources */,
 				E2E13F81213A50610018E6E1 /* EnterpriseNavigationController.swift in Sources */,
 				CC87524C213F21E500BFCDA6 /* NewsTableViewController.swift in Sources */,
 				E2F3D04D213B960900B5D59E /* LibraryAPI.swift in Sources */,
+				CCD2C1D8213F76AA0026037A /* CoreDataBO.swift in Sources */,
+				CCD2C1E0213F856E0026037A /* Recorder.swift in Sources */,
 				E20178AF213A47D800B79D46 /* HomeViewController.swift in Sources */,
 				E2E13F8A213A56C50018E6E1 /* EnterpriseViewController.swift in Sources */,
 				E2E13F88213A56460018E6E1 /* NotesViewController.swift in Sources */,
+				CCD2C1DE213F842E0026037A /* AudioManager.swift in Sources */,
 				E2E13F86213A55AB0018E6E1 /* Storyboard.swift in Sources */,
 				E2F3D049213B902200B5D59E /* BO.swift in Sources */,
 				CC87524E213F2C9200BFCDA6 /* NewsDetailTableViewController.swift in Sources */,
@@ -930,6 +962,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCD2C1D0213F59B20026037A /* EnterpriseDemo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCD2C1D1213F59B20026037A /* EnterpriseDemo.xcdatamodel */,
+			);
+			currentVersion = CCD2C1D1213F59B20026037A /* EnterpriseDemo.xcdatamodel */;
+			path = EnterpriseDemo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E2017868213A3D5E00B79D46 /* Project object */;
 }

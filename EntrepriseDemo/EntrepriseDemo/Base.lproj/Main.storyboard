@@ -116,13 +116,40 @@
                     <view key="view" contentMode="scaleToFill" id="zrj-CR-IEj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.43921568630000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjN-Ms-iP1" customClass="Recorder" customModule="EntrepriseDemo" customModuleProvider="target">
+                                <rect key="frame" x="154" y="65" width="67" height="53"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconIncidentRecordAudio" translatesAutoresizingMaskIntoConstraints="NO" id="woC-3Y-Rnn">
+                                        <rect key="frame" x="16" y="11" width="35" height="34"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.32744587821041926" green="0.45908806250498269" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="woC-3Y-Rnn" secondAttribute="trailing" constant="16" id="0su-uK-B0Q"/>
+                                    <constraint firstAttribute="bottom" secondItem="woC-3Y-Rnn" secondAttribute="bottom" constant="8" id="AFE-K1-scV"/>
+                                    <constraint firstItem="woC-3Y-Rnn" firstAttribute="leading" secondItem="JjN-Ms-iP1" secondAttribute="leading" constant="16" id="AqY-XU-O8G"/>
+                                    <constraint firstAttribute="height" constant="53" id="Nhz-Jj-oWk"/>
+                                    <constraint firstItem="woC-3Y-Rnn" firstAttribute="top" secondItem="JjN-Ms-iP1" secondAttribute="top" constant="11" id="cjg-7i-9cR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.62672711794224756" green="0.38539511633396156" blue="0.9651225209236145" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="elQ-uf-H1q" firstAttribute="trailing" secondItem="JjN-Ms-iP1" secondAttribute="trailing" constant="154" id="0ch-e7-sb1"/>
+                            <constraint firstItem="JjN-Ms-iP1" firstAttribute="leading" secondItem="elQ-uf-H1q" secondAttribute="leading" constant="154" id="BJD-Hb-nWg"/>
+                            <constraint firstItem="JjN-Ms-iP1" firstAttribute="top" secondItem="elQ-uf-H1q" secondAttribute="top" constant="45" id="SND-2I-AFJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="elQ-uf-H1q"/>
                     </view>
+                    <connections>
+                        <outlet property="recorder" destination="JjN-Ms-iP1" id="KmK-4d-GUa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OTD-Gb-vwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1580" y="308"/>
+            <point key="canvasLocation" x="1580" y="307.1964017991005"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="01b-S8-aFL">
@@ -306,4 +333,7 @@
             <point key="canvasLocation" x="3221.5999999999999" y="-278.41079460269867"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconIncidentRecordAudio" width="37" height="37"/>
+    </resources>
 </document>

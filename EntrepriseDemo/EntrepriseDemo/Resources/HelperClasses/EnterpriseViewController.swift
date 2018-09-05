@@ -40,4 +40,9 @@ class EnterpriseViewController: UIViewController {
             view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         }
     }
+    
+    func printStoreLocation(){
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        print(documentsDirectory)
+    }
 }
