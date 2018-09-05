@@ -44,3 +44,24 @@ class NewsItem {
         self.thumbnail = json["fields"]["thumbnail"].string ?? String()
     }
 }
+
+class Pagination {
+    let total: Int
+    let currentPage:Int
+    let totalPages:Int
+    let pageSize:Int
+    
+    init(){
+        self.total = 0
+        self.currentPage = 0
+        self.totalPages = 0
+        self.pageSize = 0
+    }
+    
+    init(json:JSON){
+        self.total = json["total"].int ?? 0
+        self.currentPage = json["currentPage"].int ?? 0
+        self.totalPages = json["pages"].int ?? 0
+        self.pageSize = json["pageSize"].int ?? 0
+    }
+}

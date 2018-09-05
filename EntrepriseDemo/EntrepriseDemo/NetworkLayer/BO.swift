@@ -27,7 +27,7 @@ class BO: NSObject {
     
     func requestService(service: String, methodType: Alamofire.HTTPMethod, parameters: Any?, isRefresh: Bool = false, onSuccess: @escaping (_ jsonData: JSON)->(), onError: @escaping (NSError) -> ())
     {
-        let urlStr = "https://www.alphavantage.co/query"
+        let urlStr = service
         guard let url = URL(string: urlStr) else {
             return
         }
@@ -65,18 +65,29 @@ class BO: NSObject {
         } , onError: onError)
     }
     
-    func getNewsFeed(onSuccess: @escaping(_ timeSeries: TimeSeries)->(), onError: @escaping(NSError)->()){
-        var params:[String:Any] = [:]
-        params["api-key"] = Constants.ApiKey.kTheGuardian
-        //params["show-fields"] = "thumbnail"
-        
+    //MARK: - NEWS DATA
+    func getNewsFeed(_ params:[String:Any], onSuccess: @escaping((news: [NewsItem], pagination: Pagination))->(), onError: @escaping(NSError)->()){
         self.requestService(service: Constants.kTheGuardianApi, methodType: .get, parameters: params, onSuccess:{[weak self] json in
             
+            let pagination = Pagination(json: json["response"])
+            var newsItems:[NewsItem] = []
+            if let items = json["response"]["results"].array {
+                newsItems = items.map({NewsItem(json:$0)})
+            }
             
+            onSuccess((newsItems, pagination))
             //onSuccess(timeSeries)
             } , onError: onError)
     }
     
+//    func getNewsDetail(_ apiURL: String, onSuccess: @escaping(_ detail: String)->(), onError: @escaping(NSError)->()){
+//        var params:[String:Any] = [:]
+//        params["api-key"] = Constants.ApiKey.kTheGuardian
+//        self.requestService(service: apiURL, methodType: .get, parameters: params, onSuccess:{[weak self] json in
+//
+//            onSuccess(json.string ?? String())
+//            } , onError: onError)
+//    }
     
     //MARK: - UTILITIES
     

@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 class HomeViewController: EnterpriseViewController {
 
+    var newsTable: NewsTableViewController?
     deinit {
         print("deinit homeviewcontroller")
     }
@@ -19,11 +20,7 @@ class HomeViewController: EnterpriseViewController {
         self.loadConfig()
 
 
-        LibraryAPI.shared.bo.getNewsFeed(onSuccess: { (response) in
-            
-        }) { (error) in
-            
-        }
+        
 //        LibraryAPI.shared.bo.getTimeSeriesFor(equity: "MSFT", onSuccess: { (timeSeries) in
 //
 //        }) { (error) in
@@ -48,14 +45,18 @@ class HomeViewController: EnterpriseViewController {
     
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "NewsTableViewController" {
+            if let news = segue.destination as? NewsTableViewController{
+                self.newsTable = news
+            }
+            
+        }
     }
-    */
+ 
 
 }
