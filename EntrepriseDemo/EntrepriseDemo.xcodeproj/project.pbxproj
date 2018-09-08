@@ -24,6 +24,7 @@
 		CCC03F4D21444461003291E2 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC03F4B21444461003291E2 /* NewsTableViewCell.swift */; };
 		CCC03F4E21444461003291E2 /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC03F4C21444461003291E2 /* NewsTableViewCell.xib */; };
 		CCC03F50214448A8003291E2 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC03F4F214448A8003291E2 /* ImageExtensions.swift */; };
+		CCC03F5221446816003291E2 /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC03F5121446816003291E2 /* UserDefaultManager.swift */; };
 		CCD2C1D2213F59B20026037A /* EnterpriseDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1D0213F59B20026037A /* EnterpriseDemo.xcdatamodeld */; };
 		CCD2C1D8213F76AA0026037A /* CoreDataBO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1D7213F76AA0026037A /* CoreDataBO.swift */; };
 		CCD2C1DC213F78A90026037A /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2C1DB213F78A90026037A /* NoteItem.swift */; };
@@ -93,6 +94,7 @@
 		CCC03F4B21444461003291E2 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CCC03F4C21444461003291E2 /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		CCC03F4F214448A8003291E2 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
+		CCC03F5121446816003291E2 /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		CCD2C1D1213F59B20026037A /* EnterpriseDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EnterpriseDemo.xcdatamodel; sourceTree = "<group>"; };
 		CCD2C1D7213F76AA0026037A /* CoreDataBO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBO.swift; sourceTree = "<group>"; };
 		CCD2C1DB213F78A90026037A /* NoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				CCD2C1DF213F856E0026037A /* Recorder.swift */,
 				CCD2C1E1213F86330026037A /* ActionsTapGestureRecognizer.swift */,
 				CCC03F4F214448A8003291E2 /* ImageExtensions.swift */,
+				CCC03F5121446816003291E2 /* UserDefaultManager.swift */,
 			);
 			path = HelperClasses;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				E2E13F81213A50610018E6E1 /* EnterpriseNavigationController.swift in Sources */,
 				CC87524C213F21E500BFCDA6 /* NewsTableViewController.swift in Sources */,
 				E2F3D04D213B960900B5D59E /* LibraryAPI.swift in Sources */,
+				CCC03F5221446816003291E2 /* UserDefaultManager.swift in Sources */,
 				CCD2C1D8213F76AA0026037A /* CoreDataBO.swift in Sources */,
 				CC8ADEDB21431153006C9C75 /* NoteDetailViewController.swift in Sources */,
 				CCD2C1E0213F856E0026037A /* Recorder.swift in Sources */,

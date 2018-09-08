@@ -12,6 +12,7 @@ import SwiftyJSON
 class TimeSeries
 {
     var data:[(String, TimeSeriesItem)]
+    
     init() {
         self.data = [(String(), TimeSeriesItem())]
     }

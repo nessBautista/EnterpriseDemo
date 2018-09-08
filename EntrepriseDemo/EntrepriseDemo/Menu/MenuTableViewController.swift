@@ -14,6 +14,12 @@ class MenuTableViewController: UITableViewController {
     
     @IBOutlet weak var lblMaps: UILabel!
     @IBOutlet weak var lblReport: UILabel!
+    
+    @IBOutlet weak var lblLogout: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadConfig()
@@ -25,6 +31,7 @@ class MenuTableViewController: UITableViewController {
         self.lblNotes.text = "Notes"
         self.lblReport.text = "Reports"
         self.lblMaps.text = "Maps"
+        self.lblLogout.text = "Logout"
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,6 +86,10 @@ class MenuTableViewController: UITableViewController {
             let navController = EnterpriseNavigationController(rootViewController: vcMap)
             self.pushFromRevealViewController(navController)
             self.closeMenu()
+        case 4:
+            print("Logout")
+            self.closeMenu()
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "performLogout"), object: nil)
         default:
             break
         }

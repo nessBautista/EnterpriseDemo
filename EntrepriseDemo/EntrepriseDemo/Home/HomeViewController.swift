@@ -10,11 +10,16 @@ import UIKit
 import Alamofire
 class HomeViewController: EnterpriseViewController {
 
+    //MARK: - VARIABLES AND OUTLETS
     var newsTable: NewsTableViewController?
+    
+    
+    //MARK: - LIFE CYCLE
     deinit {
         print("deinit homeviewcontroller")
     }
-    //MARK: - LIFE CYCLE
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadConfig()
@@ -36,12 +41,28 @@ class HomeViewController: EnterpriseViewController {
 //        })
     }
 
-    
-    
-    fileprivate func loadConfig(){
-        
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaultManager.getLoginStatus() == false {
+            self.performLogout()
+        }
     }
     
+    fileprivate func loadConfig(){
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "performLogout"), object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(self.performLogout), name: NSNotification.Name(rawValue: "performLogout"), object: nil)
+    }
+    
+    @objc fileprivate func performLogout(){
+        MessageManager.shared.showLoadingHUD()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            
+            UserDefaultManager.cleanUserDefaults()
+            UserDefaultManager.setLogInStatus(status: false)
+            let vcLogin: LoginViewController = Storyboard.getInstanceFromStoryboard(StoryboardsIds.main.rawValue)
+            self.present(vcLogin, animated: true, completion: {MessageManager.shared.hideHUD()})
+        })
+        
+    }
     
     
 

@@ -30,37 +30,42 @@ class RangedAxisExample: UIViewController {
         
         LibraryAPI.shared.bo.getTimeSeriesFor(equity: "MSFT", onSuccess: { (timeSeries) in
             
-            var chartPointsHigh:[(Double,Double)] = []
-            for item in timeSeries.data {
-                
-                let point = (Double(item.0.components(separatedBy: "-").first ?? String()) ?? 0, item.1.high)
-                chartPointsHigh.append(point)
-            }
-            self.chartPointsHigh = chartPointsHigh.sorted(by: {$0.0 < $1.0})
-            
-            
-            var chartPointsLow:[(Double,Double)] = []
-            for item in timeSeries.data {
-                
-                let point = (Double(item.0.components(separatedBy: "-").first ?? String()) ?? 0, item.1.low)
-                chartPointsLow.append(point)
-            }
-            self.chartPointsLow = chartPointsLow.sorted(by: {$0.0 < $1.0})
-            
-            
-            var chartPointsOpen:[(Double,Double)] = []
-            for item in timeSeries.data {
-                
-                let point = (Double(item.0.components(separatedBy: "-").first ?? String()) ?? 0, item.1.open)
-                chartPointsOpen.append(point)
-            }
-            self.chartPointsOpen = chartPointsOpen.sorted(by: {$0.0 < $1.0})
-            
-            self.initChart(self.chartPointsHigh, self.chartPointsLow, self.chartPointsOpen)
+            self.loadGraph(timeSeries)
             
         }) { (error) in
             print(error)
         }
+    }
+    
+    
+    func loadGraph(_ timeSeries: TimeSeries) {
+        var chartPointsHigh:[(Double,Double)] = []
+        for item in timeSeries.data {
+            
+            let point = (Double(item.0.components(separatedBy: "-").first ?? String()) ?? 0, item.1.high)
+            chartPointsHigh.append(point)
+        }
+        self.chartPointsHigh = chartPointsHigh.sorted(by: {$0.0 < $1.0})
+        
+        
+        var chartPointsLow:[(Double,Double)] = []
+        for item in timeSeries.data {
+            
+            let point = (Double(item.0.components(separatedBy: "-").first ?? String()) ?? 0, item.1.low)
+            chartPointsLow.append(point)
+        }
+        self.chartPointsLow = chartPointsLow.sorted(by: {$0.0 < $1.0})
+        
+        
+        var chartPointsOpen:[(Double,Double)] = []
+        for item in timeSeries.data {
+            
+            let point = (Double(item.0.components(separatedBy: "-").first ?? String()) ?? 0, item.1.open)
+            chartPointsOpen.append(point)
+        }
+        self.chartPointsOpen = chartPointsOpen.sorted(by: {$0.0 < $1.0})
+        
+        self.initChart(self.chartPointsHigh, self.chartPointsLow, self.chartPointsOpen)
     }
     
     private func initChart(_ line1ModelData: [(Double, Double)], _ line2ModelData: [(Double, Double)],  _ line3ModelData: [(Double, Double)]) {
