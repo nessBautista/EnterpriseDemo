@@ -18,9 +18,25 @@ class NewsTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadConfig()
         self.getNews()
     }
-
+    
+    // MARK: - LOADS
+    fileprivate func loadConfig(){
+        //Register cell
+        self.tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
+        //Create refresh control
+        self.tableView.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl?.addTarget(self, action: #selector(self.reloadTable),for: UIControlEvents.valueChanged)
+        self.tableView.refreshControl?.setLastUpdate()
+    }
+    
+    @objc fileprivate func reloadTable(){
+        self.news = []
+        self.getNews()
+    }
+    
     // MARK: - WEB SERVICES
     fileprivate func getNews(){
         var params:[String:Any] = [:]
@@ -32,6 +48,9 @@ class NewsTableViewController: UITableViewController {
             print(newsItems.count)
             self.news  += newsItems
             self.pagination = pagination
+            
+            self.tableView.refreshControl?.endRefreshing()
+            self.tableView.refreshControl?.setLastUpdate()
         }) { (error) in
             
         }
@@ -43,12 +62,17 @@ class NewsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        /*
         let item = self.news[indexPath.row]
         let cell =  self.tableView.dequeueReusableCell(withIdentifier: "Cell")
         cell?.textLabel?.text = item.title
         cell?.textLabel?.numberOfLines = 0
         
+        return cell ?? UITableViewCell()
+         */
+        let item = self.news[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell") as? NewsTableViewCell
+        cell?.loadCell(item)
         return cell ?? UITableViewCell()
     }
     

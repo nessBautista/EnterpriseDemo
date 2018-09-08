@@ -10,13 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EntrepriseDemo/DataLayer/CoreDataBO.swift"
-            timestampString = "558077641.890745"
+            timestampString = "558123607.089363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "saveNote(_:completionHandler:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,6 +32,118 @@
             startingLineNumber = "117"
             endingLineNumber = "117"
             landmarkName = "cancel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntrepriseDemo/Resources/HelperClasses/ImageExtensions.swift"
+            timestampString = "558125366.222196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "setImageWithNoCache(urlString:placeholder:onSuccess:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in EntrepriseDemo):__ObjC.UIImageView.setImageWithNoCache(urlString: Swift.String, placeholder: __ObjC.UIImage, onSuccess: Swift.Optional&lt;(__ObjC.UIImage) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EntrepriseDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ness/Documents/Courses/iOS_01/EntrepriseDemo/EntrepriseDemo/Resources/HelperClasses/ImageExtensions.swift"
+                  timestampString = "558124224.747522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in (extension in EntrepriseDemo):__ObjC.UIImageView.setImageWithNoCache(urlString: Swift.String, placeholder: __ObjC.UIImage, onSuccess: Swift.Optional&lt;(__ObjC.UIImage) -&gt; ()&gt;) -&gt; ()"
+                  moduleName = "EntrepriseDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ness/Documents/Courses/iOS_01/EntrepriseDemo/EntrepriseDemo/Resources/HelperClasses/ImageExtensions.swift"
+                  timestampString = "558124224.750088"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntrepriseDemo/Home/NewsTableViewController.swift"
+            timestampString = "558125366.2225"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntrepriseDemo/Home/Cells/NewsTableViewCell.swift"
+            timestampString = "558125366.223461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loadCell(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntrepriseDemo/Models/NewsItem.swift"
+            timestampString = "558125366.223665"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "init(json:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EntrepriseDemo/Resources/HelperClasses/ImageExtensions.swift"
+            timestampString = "558125366.223856"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "toDate()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

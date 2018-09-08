@@ -42,6 +42,9 @@ class NewsItem {
         self.webUrl = json["webUrl"].string ?? String()
         self.apiUrl = json["apiUrl"].string ?? String()
         self.thumbnail = json["fields"]["thumbnail"].string ?? String()
+        if let strDate = json["webPublicationDate"].string {
+            self.publicationDate = strDate.toDate()
+        }
     }
 }
 
