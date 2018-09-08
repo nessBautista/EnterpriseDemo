@@ -26,6 +26,7 @@ target 'EntrepriseDemo' do
   pod 'CorePlot', '~> 2.2'
   pod 'Charts'
   pod 'SwiftCharts', '~> 0.6.1'
+  pod 'McPicker'
   target 'EntrepriseDemoTests' do
     inherit! :search_paths
     # Pods for testing

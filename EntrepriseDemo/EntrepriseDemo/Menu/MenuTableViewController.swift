@@ -12,6 +12,7 @@ class MenuTableViewController: UITableViewController {
     @IBOutlet weak var lblHome: UILabel!
     @IBOutlet weak var lblNotes: UILabel!
     
+    @IBOutlet weak var lblMaps: UILabel!
     @IBOutlet weak var lblReport: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class MenuTableViewController: UITableViewController {
         self.lblHome.text = "Home"
         self.lblNotes.text = "Notes"
         self.lblReport.text = "Reports"
+        self.lblMaps.text = "Maps"
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +71,12 @@ class MenuTableViewController: UITableViewController {
             print("Reports")
             let vcNotes: ReportViewController = Storyboard.getInstanceFromStoryboard(StoryboardsIds.main.rawValue)
             let navController = EnterpriseNavigationController(rootViewController: vcNotes)
+            self.pushFromRevealViewController(navController)
+            self.closeMenu()
+        case 3:
+            print("MAPS")
+            let vcMap: MapViewController = Storyboard.getInstanceFromStoryboard(StoryboardsIds.main.rawValue)
+            let navController = EnterpriseNavigationController(rootViewController: vcMap)
             self.pushFromRevealViewController(navController)
             self.closeMenu()
         default:

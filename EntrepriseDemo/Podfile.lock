@@ -14,6 +14,7 @@ PODS:
     - HockeySDK/DefaultLib (= 5.1.2)
   - HockeySDK/DefaultLib (5.1.2)
   - KUIPopOver (1.0.4)
+  - McPicker (1.0.0)
   - PKHUD (5.1.0)
   - ReachabilitySwift (4.2.1)
   - RxCocoa (4.2.0):
@@ -45,6 +46,7 @@ DEPENDENCIES:
   - GoogleMaps
   - HockeySDK (~> 5.1.1)
   - KUIPopOver
+  - McPicker
   - PKHUD
   - ReachabilitySwift
   - RxCocoa (~> 4.0)
@@ -69,6 +71,7 @@ SPEC REPOS:
     - GoogleMaps
     - HockeySDK
     - KUIPopOver
+    - McPicker
     - PKHUD
     - ReachabilitySwift
     - RxCocoa
@@ -93,6 +96,7 @@ SPEC CHECKSUMS:
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   HockeySDK: 38b7e2726af1ea86ae97ce4b5de33ab0817e3500
   KUIPopOver: 1002fb1ab2460ac4db2bafe4f01f0c28fca806d2
+  McPicker: 130183cd3d22fc6933ea9e63c5a0d0d1becc0122
   PKHUD: 62ea46a1e88c4def1da784878d199bb54c841e3c
   ReachabilitySwift: 35720ffea59c1c76d15f885be77fd33e33985427
   RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
@@ -109,6 +113,6 @@ SPEC CHECKSUMS:
   SwiftySound: b9c3370956fd4ed65ed79d45563070077a50a2cd
   SwipeCellKit: cee9906e6d3a36e22ad1a852fba7f8fa0839d113
 
-PODFILE CHECKSUM: 09cb7fefc5c7411e87e336ff353d9556af76e08f
+PODFILE CHECKSUM: 1cb3499e3b00bc9b3fc554d53865487f940c6025
 
 COCOAPODS: 1.5.3

@@ -27,20 +27,37 @@ class CoreDataBO {
     }()
     
     
-    func saveNote(_ note: NoteItem){
+    func saveNote(_ note: NoteItem, completionHandler:((_ success:Bool)-> Void)){
         //Get Context
-        let context = self.persistentContainer.viewContext
+        let mainContext = self.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        request.predicate = NSPredicate(format: "title = %@", "\(note.title)")
+        request.returnsObjectsAsFaults = false
         
-        //Get dictionary from note
-        let dbNote = Note(context: context)
-        dbNote.setValuesForKeys(note.getDictionary())
+        //Try to find note
+        do {
+            let result = try mainContext.fetch(request)
+            if let noteDB = (result as? [NSManagedObject])?.first {
+                let noteTitle = noteDB.value(forKey: "title") as! String
+                print("Fetched Note item with title: \(noteTitle)")
+                noteDB.setValuesForKeys(note.getDictionary())
+            } else {
+                //Get dictionary from note
+                let dbNote = Note(context: mainContext)
+                dbNote.setValuesForKeys(note.getDictionary())
+            }
+        } catch {
+            print("Failed")
+            completionHandler(false)
+        }
         
         //Commit save
-        do{
-            try context.save()
-        }catch{
-            let nserror = error as NSError
-            print("error: \(nserror.userInfo)")
+        self.commitChanges { (success) in
+            if success == true {
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+            }
         }
     }
 
@@ -55,9 +72,52 @@ class CoreDataBO {
                 noteItem.title = note.title ?? String()
                 noteItem.noteDescription = note.noteDescription ?? String()
                 noteItem.creationDate = note.creationDate ?? Date()
+                noteItem.voiceNote = note.voiceNote ?? String()
                 notes.append(noteItem)                
             }
         }
         return notes
+    }
+    
+    func deleteNote(_ note: NoteItem, completionHandler:((_ success:Bool)-> Void)){
+        let mainContext = self.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Note")
+        request.predicate = NSPredicate(format: "title = %@", "\(note.title)")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try mainContext.fetch(request)
+            for data in result as! [NSManagedObject] {
+                let noteTitle = data.value(forKey: "title") as! String
+                print("Fetched Note item")
+                mainContext.delete(data)
+            }
+        } catch {
+            print("Failed")
+            
+        }
+        
+        //Commit changes
+        self.commitChanges { (success) in
+            if success == true {
+                completionHandler(true)
+            } else {
+                completionHandler(false)
+            }
+        }
+    }
+    
+    fileprivate func commitChanges(completionHandler:((_ success:Bool)->Void)) {
+        let mainContext = self.persistentContainer.viewContext
+        do
+        {
+            try mainContext.save()
+        } catch
+        {
+            let nserror = error as NSError
+            completionHandler(false)
+            fatalError("Couldn't save data. Error: \(nserror), \(nserror.userInfo)")
+            
+        }
+        completionHandler(true)
     }
 }

@@ -12,6 +12,7 @@ class NoteItem {
     var title: String
     var noteDescription: String
     var creationDate = Date()
+    var voiceNote = String()
     init(){
         self.title = String()
         self.noteDescription = String()
@@ -22,6 +23,7 @@ class NoteItem {
         dict["title"] = self.title
         dict["noteDescription"] = self.noteDescription
         dict["creationDate"] = self.creationDate
+        dict["voiceNote"] = self.voiceNote
         return dict
     }
 }
