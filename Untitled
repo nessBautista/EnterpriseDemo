@@ -1,0 +1,19 @@
+-----------Pods 1
+
+
+  pod 'SwiftLocation'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'SwiftMessages'
+  pod 'PKHUD'
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
+  pod 'RxDataSources', '~> 3.0'
+
+
+-----------Pods 2
+
+  pod 'CorePlot', '~> 2.2'
+  pod 'Charts'
+  pod 'SwiftCharts', '~> 0.6.1'
+  pod 'McPicker'
