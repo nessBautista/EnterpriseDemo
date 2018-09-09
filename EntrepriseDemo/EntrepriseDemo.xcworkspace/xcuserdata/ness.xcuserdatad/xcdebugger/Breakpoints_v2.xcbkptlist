@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "EntrepriseDemo/Report/RangedAxisExample.swift"
-            timestampString = "558133043.775677"
+            timestampString = "558133812.8129261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
@@ -41,72 +41,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "EntrepriseDemo/Home/HomeViewController.swift"
-            timestampString = "558133043.775961"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "viewDidAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EntrepriseDemo/Home/HomeViewController.swift"
-            timestampString = "558133043.776202"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "performLogout()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "EntrepriseDemo.HomeViewController.(performLogout in _3F30670378ADBE5720C9F81AC75AF7AE)() -&gt; ()"
-                  moduleName = "EntrepriseDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ness/Documents/Courses/iOS_01/EntrepriseDemo/EntrepriseDemo/Home/HomeViewController.swift"
-                  timestampString = "558132948.797541"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "81">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in EntrepriseDemo.HomeViewController.(performLogout in _3F30670378ADBE5720C9F81AC75AF7AE)() -&gt; ()"
-                  moduleName = "EntrepriseDemo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ness/Documents/Courses/iOS_01/EntrepriseDemo/EntrepriseDemo/Home/HomeViewController.swift"
-                  timestampString = "558132948.7997"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "17">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "EntrepriseDemo/Login/LoginViewController.swift"
-            timestampString = "558133043.776262"
+            timestampString = "558133812.813264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"

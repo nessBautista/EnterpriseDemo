@@ -58,7 +58,6 @@ class MenuTableViewController: UITableViewController {
     }
     
     //MARK: - DELEGATE
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         switch row {
@@ -88,6 +87,7 @@ class MenuTableViewController: UITableViewController {
             self.closeMenu()
         case 4:
             print("Logout")
+            self.navigationController?.popToRootViewController(animated: true)
             self.closeMenu()
             NotificationCenter.default.post(name: Notification.Name(rawValue: "performLogout"), object: nil)
         default:
