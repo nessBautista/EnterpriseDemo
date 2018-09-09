@@ -6,13 +6,17 @@
 //  Copyright © 2018 Nestor Hernandez. All rights reserved.
 //
 /*
-    THIS IS A PARENT CONTROLLER, IT WILL HOLD A CONTAINER CONNECTED TO A TABLEVIEWCONTROLLER
+    THIS IS A PARENT CONTROLLER, IT WILL HOLD A CONTAINER CONNECTED TO A TABLEVIEWCONTROLLER.
+    
  
  */
 import UIKit
 
 class NewsViewController: DemoAppViewController {
 
+    //MARK:- VARIABLES AND OUTLETS
+    var newsTable:NewsTableViewController?
+    
     //MARK:- LYFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,10 @@ class NewsViewController: DemoAppViewController {
     
     //MARK:- NAVIGATION
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier ==  "NewsTableViewController"{
+            if let vcNews = segue.destination as? NewsTableViewController {
+                self.newsTable = vcNews
+            }
+        }
     }
 }

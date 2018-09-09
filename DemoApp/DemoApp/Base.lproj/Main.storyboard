@@ -181,16 +181,64 @@
             <objects>
                 <viewController storyboardIdentifier="NewsViewController" id="fWO-o9-4IX" customClass="NewsViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZiJ-2Z-UXb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="de8-em-j4y">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="RCe-kN-rX3" kind="embed" identifier="NewsTableViewController" id="6LG-yE-oGe"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" red="0.70334763601036276" green="0.47837795028141172" blue="0.11826072528816874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="de8-em-j4y" firstAttribute="leading" secondItem="B2z-P7-X9V" secondAttribute="leading" id="HIJ-tU-73W"/>
+                            <constraint firstItem="de8-em-j4y" firstAttribute="bottom" secondItem="B2z-P7-X9V" secondAttribute="bottom" id="NVs-g7-jcr"/>
+                            <constraint firstItem="de8-em-j4y" firstAttribute="top" secondItem="B2z-P7-X9V" secondAttribute="top" id="VoO-Xq-Ba3"/>
+                            <constraint firstItem="de8-em-j4y" firstAttribute="trailing" secondItem="B2z-P7-X9V" secondAttribute="trailing" id="e1e-Qq-QNg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="B2z-P7-X9V"/>
                     </view>
                     <navigationItem key="navigationItem" id="kYc-cH-a49"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AjK-MN-lq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1961" y="805"/>
+            <point key="canvasLocation" x="1960.8" y="804.64767616191909"/>
+        </scene>
+        <!--News Table View Controller-->
+        <scene sceneID="xNq-dh-Cyw">
+            <objects>
+                <tableViewController storyboardIdentifier="NewsTableViewController" id="RCe-kN-rX3" customClass="NewsTableViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="u68-qp-U5u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="RCe-kN-rX3" id="rdR-RC-Orc"/>
+                            <outlet property="delegate" destination="RCe-kN-rX3" id="J1O-Ci-sIi"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBm-GV-lyW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2864.8000000000002" y="775.86206896551732"/>
+        </scene>
+        <!--News Detail View Controller-->
+        <scene sceneID="KxA-2M-GdV">
+            <objects>
+                <viewController storyboardIdentifier="NewsDetailViewController" id="esi-Bx-FQL" customClass="NewsDetailViewController" customModule="DemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E7F-HO-VUN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fhY-Lo-20S"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4JD-nx-OGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3713" y="793"/>
         </scene>
         <!--Notes View Controller-->
         <scene sceneID="45h-U6-jR3">

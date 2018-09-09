@@ -12,7 +12,10 @@ import SwiftyJSON
 
 class NetworkManager: NSObject {
 
+    
     //MARK:- VARIABLES
+    //Singleton
+    static let shared = NetworkManager()
     var alamofireManager: Alamofire.SessionManager?
     
     //MARK:- MAIN GATEWAY
