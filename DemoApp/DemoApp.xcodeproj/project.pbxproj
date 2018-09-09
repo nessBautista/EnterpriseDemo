@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CB54E8262E814C795913A88F /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2C535568029D72A9A79475A /* Pods_DemoApp.framework */; };
+		CC3B02482144CF8300B36A2D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B02472144CF8300B36A2D /* NetworkManager.swift */; };
+		CC3B024E2144D05300B36A2D /* TimeSeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B024A2144D05300B36A2D /* TimeSeries.swift */; };
+		CC3B024F2144D05300B36A2D /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B024B2144D05300B36A2D /* NewsItem.swift */; };
+		CC3B02502144D05300B36A2D /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B024C2144D05300B36A2D /* Place.swift */; };
+		CC3B02512144D05300B36A2D /* NoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B024D2144D05300B36A2D /* NoteItem.swift */; };
+		CC3B02532144D0CC00B36A2D /* AppExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B02522144D0CC00B36A2D /* AppExtensions.swift */; };
 		CC62BFBC2144B04400CFC124 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC62BFBB2144B04400CFC124 /* SWRevealViewController.m */; };
 		CC62BFBF2144B16400CFC124 /* DemoAppNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62BFBE2144B16400CFC124 /* DemoAppNavigationViewController.swift */; };
 		CC62BFC12144B28A00CFC124 /* DemoAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62BFC02144B28A00CFC124 /* DemoAppViewController.swift */; };
@@ -31,6 +37,12 @@
 /* Begin PBXFileReference section */
 		A2C535568029D72A9A79475A /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62733B037DF875B68F4898F /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		CC3B02472144CF8300B36A2D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CC3B024A2144D05300B36A2D /* TimeSeries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeSeries.swift; sourceTree = "<group>"; };
+		CC3B024B2144D05300B36A2D /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
+		CC3B024C2144D05300B36A2D /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		CC3B024D2144D05300B36A2D /* NoteItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteItem.swift; sourceTree = "<group>"; };
+		CC3B02522144D0CC00B36A2D /* AppExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		CC62BFB92144B04400CFC124 /* DemoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC62BFBA2144B04400CFC124 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CC62BFBB2144B04400CFC124 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -76,6 +88,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC3B02462144CF1000B36A2D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CC3B02472144CF8300B36A2D /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CC3B02492144D02300B36A2D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CC3B024B2144D05300B36A2D /* NewsItem.swift */,
+				CC3B024D2144D05300B36A2D /* NoteItem.swift */,
+				CC3B024C2144D05300B36A2D /* Place.swift */,
+				CC3B024A2144D05300B36A2D /* TimeSeries.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CC62BFB82144ACBE00CFC124 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,8 +122,11 @@
 			isa = PBXGroup;
 			children = (
 				CC62BFCC2144B7D000CFC124 /* Constants.swift */,
+				CC3B02492144D02300B36A2D /* Models */,
+				CC3B02462144CF1000B36A2D /* Network */,
 				CC62BFCE2144B88C00CFC124 /* Classes */,
 				CC62BFC22144B61300CFC124 /* Singletons */,
+				CC3B02522144D0CC00B36A2D /* AppExtensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -333,15 +367,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC62BFBF2144B16400CFC124 /* DemoAppNavigationViewController.swift in Sources */,
+				CC3B02502144D05300B36A2D /* Place.swift in Sources */,
 				CC62BFC12144B28A00CFC124 /* DemoAppViewController.swift in Sources */,
 				CCC03F832144A47C003291E2 /* AppDelegate.swift in Sources */,
 				CC62BFD02144B90B00CFC124 /* Storyboard.swift in Sources */,
+				CC3B02482144CF8300B36A2D /* NetworkManager.swift in Sources */,
+				CC3B02532144D0CC00B36A2D /* AppExtensions.swift in Sources */,
+				CC3B024E2144D05300B36A2D /* TimeSeries.swift in Sources */,
 				CC62BFBC2144B04400CFC124 /* SWRevealViewController.m in Sources */,
+				CC3B024F2144D05300B36A2D /* NewsItem.swift in Sources */,
 				CCC03F952144A6FC003291E2 /* MenuTableViewController.swift in Sources */,
 				CC62BFC72144B69A00CFC124 /* UserDefaultManager.swift in Sources */,
 				CC9172822144C3A6008BF504 /* ReportViewController.swift in Sources */,
 				CC62BFC82144B69A00CFC124 /* AudioManager.swift in Sources */,
 				CC9172802144C395008BF504 /* NotesViewController.swift in Sources */,
+				CC3B02512144D05300B36A2D /* NoteItem.swift in Sources */,
 				CC9172862144C4CF008BF504 /* NewsViewController.swift in Sources */,
 				CC62BFC62144B69A00CFC124 /* MessageManager.swift in Sources */,
 				CC62BFCB2144B7B800CFC124 /* LoginViewController.swift in Sources */,
