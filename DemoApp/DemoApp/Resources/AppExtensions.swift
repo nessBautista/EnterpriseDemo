@@ -52,6 +52,16 @@ extension String {
         
         return dateFormateForDate.date(from: dateStringWithoutT)
     }
+    
+    func stringFromTimeIntervalMinutes(_ interval: TimeInterval) -> String
+    {
+        let ti = Int(interval)
+        let seconds = ti % 60
+        let minutes = (ti / 60) % 60
+        //let hours = (ti / 3600)
+        
+        return String(format: "%0.2d:%0.2d", minutes, seconds)
+    }
 }
 
 extension Date {

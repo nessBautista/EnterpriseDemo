@@ -239,7 +239,7 @@ class AudioManager: NSObject
         if self.doesDirectoryExist() == false
         {
             var audioPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-            audioPath = self.id.isEmpty == false ? audioPath.appendingPathComponent("EnterpriseDemo/\(self.id)") : audioPath.appendingPathComponent("General/Audios")
+            audioPath = self.id.isEmpty == false ? audioPath.appendingPathComponent("DemoAppStorage/\(self.id)") : audioPath.appendingPathComponent("General/Audios")
             
             do
             {
@@ -252,7 +252,7 @@ class AudioManager: NSObject
         }
         
         var documentsURL = FileManager.default.urls(for: FileManager.SearchPathDirectory.documentDirectory, in: FileManager.SearchPathDomainMask.userDomainMask).first!
-        documentsURL = self.id.isEmpty == false ? documentsURL.appendingPathComponent("EnterpriseDemo/\(self.id)/\(currentFileName)") : documentsURL.appendingPathComponent("General/Audios/\(currentFileName)")
+        documentsURL = self.id.isEmpty == false ? documentsURL.appendingPathComponent("DemoAppStorage/\(self.id)/\(currentFileName)") : documentsURL.appendingPathComponent("General/Audios/\(currentFileName)")
         
         if FileManager.default.fileExists(atPath: documentsURL.absoluteString)
         {
@@ -287,7 +287,7 @@ class AudioManager: NSObject
     func doesDirectoryExist() -> Bool
     {
         var path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        path = self.id.isEmpty == false ? path.appendingPathComponent("EnterpriseDemo/\(self.id)") : path.appendingPathComponent("General/Audios")
+        path = self.id.isEmpty == false ? path.appendingPathComponent("DemoAppStorage/\(self.id)") : path.appendingPathComponent("General/Audios")
         
         if let doesResourceExists = try? path.checkResourceIsReachable(), doesResourceExists == true {
             

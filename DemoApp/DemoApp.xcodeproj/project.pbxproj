@@ -18,6 +18,11 @@
 		CC4728D62145A14500E632EF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4728D42145A14500E632EF /* NewsTableViewCell.swift */; };
 		CC4728D72145A14500E632EF /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC4728D52145A14500E632EF /* NewsTableViewCell.xib */; };
 		CC4728D92145A81000E632EF /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4728D82145A81000E632EF /* NewsDetailViewController.swift */; };
+		CC4728DD2145B75000E632EF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4728DC2145B75000E632EF /* CoreDataManager.swift */; };
+		CC4728E02145BB1300E632EF /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC4728DE2145BB1300E632EF /* CoreDataModel.xcdatamodeld */; };
+		CC4728E22145BD7400E632EF /* NoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4728E12145BD7400E632EF /* NoteDetailViewController.swift */; };
+		CC4728E42145C03200E632EF /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4728E32145C03200E632EF /* Recorder.swift */; };
+		CC4728E62145C05400E632EF /* ActionsTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4728E52145C05400E632EF /* ActionsTapGestureRecognizer.swift */; };
 		CC62BFBC2144B04400CFC124 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC62BFBB2144B04400CFC124 /* SWRevealViewController.m */; };
 		CC62BFBF2144B16400CFC124 /* DemoAppNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62BFBE2144B16400CFC124 /* DemoAppNavigationViewController.swift */; };
 		CC62BFC12144B28A00CFC124 /* DemoAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62BFC02144B28A00CFC124 /* DemoAppViewController.swift */; };
@@ -31,6 +36,8 @@
 		CC9172822144C3A6008BF504 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9172812144C3A6008BF504 /* ReportViewController.swift */; };
 		CC9172842144C3E6008BF504 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9172832144C3E6008BF504 /* MapViewController.swift */; };
 		CC9172862144C4CF008BF504 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9172852144C4CF008BF504 /* NewsViewController.swift */; };
+		CC9F915A2145FBA900061EE7 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9F91582145FBA900061EE7 /* MapDetailViewController.swift */; };
+		CC9F915B2145FBA900061EE7 /* MapDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC9F91592145FBA900061EE7 /* MapDetailViewController.xib */; };
 		CCC03F832144A47C003291E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC03F822144A47C003291E2 /* AppDelegate.swift */; };
 		CCC03F882144A47C003291E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCC03F862144A47C003291E2 /* Main.storyboard */; };
 		CCC03F8A2144A47D003291E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC03F892144A47D003291E2 /* Assets.xcassets */; };
@@ -51,6 +58,11 @@
 		CC4728D42145A14500E632EF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		CC4728D52145A14500E632EF /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
 		CC4728D82145A81000E632EF /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
+		CC4728DC2145B75000E632EF /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		CC4728DF2145BB1300E632EF /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		CC4728E12145BD7400E632EF /* NoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewController.swift; sourceTree = "<group>"; };
+		CC4728E32145C03200E632EF /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
+		CC4728E52145C05400E632EF /* ActionsTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		CC62BFB92144B04400CFC124 /* DemoApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		CC62BFBA2144B04400CFC124 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		CC62BFBB2144B04400CFC124 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -66,6 +78,8 @@
 		CC9172812144C3A6008BF504 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		CC9172832144C3E6008BF504 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CC9172852144C4CF008BF504 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		CC9F91582145FBA900061EE7 /* MapDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
+		CC9F91592145FBA900061EE7 /* MapDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapDetailViewController.xib; sourceTree = "<group>"; };
 		CCC03F7F2144A47C003291E2 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCC03F822144A47C003291E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCC03F872144A47C003291E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +138,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		CC4728DB2145B73800E632EF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				CC4728DE2145BB1300E632EF /* CoreDataModel.xcdatamodeld */,
+				CC4728DC2145B75000E632EF /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		CC62BFB82144ACBE00CFC124 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +161,13 @@
 		CC62BFBD2144B13A00CFC124 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CC3B02522144D0CC00B36A2D /* AppExtensions.swift */,
 				CC62BFCC2144B7D000CFC124 /* Constants.swift */,
+				CC4728DB2145B73800E632EF /* CoreData */,
 				CC3B02492144D02300B36A2D /* Models */,
 				CC3B02462144CF1000B36A2D /* Network */,
 				CC62BFCE2144B88C00CFC124 /* Classes */,
 				CC62BFC22144B61300CFC124 /* Singletons */,
-				CC3B02522144D0CC00B36A2D /* AppExtensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -169,6 +193,8 @@
 		CC62BFCE2144B88C00CFC124 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CC4728E52145C05400E632EF /* ActionsTapGestureRecognizer.swift */,
+				CC4728E32145C03200E632EF /* Recorder.swift */,
 				CC62BFCF2144B90B00CFC124 /* Storyboard.swift */,
 				CC62BFBE2144B16400CFC124 /* DemoAppNavigationViewController.swift */,
 				CC62BFC02144B28A00CFC124 /* DemoAppViewController.swift */,
@@ -188,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				CC91727F2144C395008BF504 /* NotesViewController.swift */,
+				CC4728E12145BD7400E632EF /* NoteDetailViewController.swift */,
 			);
 			path = Notes;
 			sourceTree = "<group>";
@@ -195,6 +222,8 @@
 		CC9172892144C655008BF504 /* Map */ = {
 			isa = PBXGroup;
 			children = (
+				CC9F91582145FBA900061EE7 /* MapDetailViewController.swift */,
+				CC9F91592145FBA900061EE7 /* MapDetailViewController.xib */,
 				CC9172832144C3E6008BF504 /* MapViewController.swift */,
 			);
 			path = Map;
@@ -318,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9F915B2145FBA900061EE7 /* MapDetailViewController.xib in Resources */,
 				CCC03F8D2144A47E003291E2 /* LaunchScreen.storyboard in Resources */,
 				CCC03F8A2144A47D003291E2 /* Assets.xcassets in Resources */,
 				CC4728D72145A14500E632EF /* NewsTableViewCell.xib in Resources */,
@@ -336,11 +366,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApp/Pods-DemoApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CorePlot/CorePlot.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/McPicker/McPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -348,11 +381,14 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CorePlot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/McPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -389,11 +425,13 @@
 			files = (
 				CC4728D92145A81000E632EF /* NewsDetailViewController.swift in Sources */,
 				CC62BFBF2144B16400CFC124 /* DemoAppNavigationViewController.swift in Sources */,
+				CC4728E22145BD7400E632EF /* NoteDetailViewController.swift in Sources */,
 				CC3B02502144D05300B36A2D /* Place.swift in Sources */,
 				CC62BFC12144B28A00CFC124 /* DemoAppViewController.swift in Sources */,
 				CCC03F832144A47C003291E2 /* AppDelegate.swift in Sources */,
 				CC4728D1214594A600E632EF /* NewsTableViewController.swift in Sources */,
 				CC62BFD02144B90B00CFC124 /* Storyboard.swift in Sources */,
+				CC4728E62145C05400E632EF /* ActionsTapGestureRecognizer.swift in Sources */,
 				CC3B02482144CF8300B36A2D /* NetworkManager.swift in Sources */,
 				CC3B02532144D0CC00B36A2D /* AppExtensions.swift in Sources */,
 				CC4728D62145A14500E632EF /* NewsTableViewCell.swift in Sources */,
@@ -403,8 +441,12 @@
 				CCC03F952144A6FC003291E2 /* MenuTableViewController.swift in Sources */,
 				CC62BFC72144B69A00CFC124 /* UserDefaultManager.swift in Sources */,
 				CC9172822144C3A6008BF504 /* ReportViewController.swift in Sources */,
+				CC4728E02145BB1300E632EF /* CoreDataModel.xcdatamodeld in Sources */,
 				CC62BFC82144B69A00CFC124 /* AudioManager.swift in Sources */,
+				CC9F915A2145FBA900061EE7 /* MapDetailViewController.swift in Sources */,
+				CC4728E42145C03200E632EF /* Recorder.swift in Sources */,
 				CC9172802144C395008BF504 /* NotesViewController.swift in Sources */,
+				CC4728DD2145B75000E632EF /* CoreDataManager.swift in Sources */,
 				CC3B02512144D05300B36A2D /* NoteItem.swift in Sources */,
 				CC9172862144C4CF008BF504 /* NewsViewController.swift in Sources */,
 				CC62BFC62144B69A00CFC124 /* MessageManager.swift in Sources */,
@@ -615,6 +657,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CC4728DE2145BB1300E632EF /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CC4728DF2145BB1300E632EF /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = CC4728DF2145BB1300E632EF /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CCC03F772144A47C003291E2 /* Project object */;
 }

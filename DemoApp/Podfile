@@ -14,7 +14,8 @@ target 'DemoApp' do
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
   pod 'RxDataSources', '~> 3.0'
- 
+  pod 'McPicker'
   
-  
+  pod 'CorePlot', '~> 2.2'
+  pod 'SwiftCharts', '~> 0.6.1'
 end

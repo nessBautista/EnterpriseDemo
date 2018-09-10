@@ -244,8 +244,7 @@ extension MapViewController: UISearchBarDelegate
         searchBar.setShowsCancelButton(false, animated: true)
         searchBar.text = String()
         searchBar.resignFirstResponder()
-        
-        
+                
         //Filter by segment
        // self.filterIncidents(segment: self.currentSegment, searchText: searchBar.text)
     }

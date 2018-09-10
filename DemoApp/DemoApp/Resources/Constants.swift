@@ -9,7 +9,11 @@
 enum StoryboardsIds: String {
     case main = "Main"    
 }
-
+enum ScreenType:Int {
+    case new
+    case edit
+    case readOnly
+}
 struct Constants {
     //APIs (Or servers....)
     static let kFinanceApi = "https://www.alphavantage.co/query"
